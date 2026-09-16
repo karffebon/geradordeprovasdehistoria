@@ -15,41 +15,22 @@
   <aside class="panel controls">
     <h1>Montar avaliações</h1>
     <p class="muted">Crie até 3 provas trimestrais sem repetir questões entre elas.</p>
-
-    <label>Quantidade de provas
-      <select id="testCount"><option value="1">1 prova</option><option value="2">2 provas</option><option value="3">3 provas (1 por trimestre)</option></select>
-    </label>
-
-    <label>Questões por prova
-      <input id="questionsPerTest" type="number" min="1" max="40" value="10">
-    </label>
-
+    <label>Quantidade de provas<select id="testCount"><option value="1">1 prova</option><option value="2">2 provas</option><option value="3">3 provas (1 por trimestre)</option></select></label>
+    <label>Questões por prova<input id="questionsPerTest" type="number" min="1" max="40" value="10"></label>
     <div class="tier-grid">
       <label>Tier 1 · Fácil<input id="tier1" type="number" min="0" value="4"></label>
       <label>Tier 2 · Médio<input id="tier2" type="number" min="0" value="3"></label>
       <label>Tier 3 · Difícil<input id="tier3" type="number" min="0" value="3"></label>
     </div>
     <div class="hint" id="mixHint">A soma dos tiers deve ser igual ao número de questões.</div>
-
     <label>Título da avaliação<input id="testTitle" value="Avaliação de História"></label>
     <label>Turma / ano<input id="className" placeholder="Ex.: 9º ano A"></label>
     <label>Professor(a)<input id="teacherName" placeholder="Nome do(a) professor(a)"></label>
-
-    <div class="actions">
-      <button class="primary" id="generateBtn">Gerar prova(s)</button>
-      <button id="rerollBtn" disabled>Reroll selecionadas</button>
-    </div>
-    <div class="actions secondary-actions">
-      <button id="printTestsBtn" disabled>Exportar prova(s) em PDF</button>
-      <button id="printKeyBtn" disabled>Exportar gabarito em PDF</button>
-    </div>
-    <div class="actions secondary-actions">
-      <button id="exportJsonBtn" disabled>Exportar seleção JSON</button>
-      <label class="file-btn">Importar banco JSON<input id="importJson" type="file" accept="application/json"></label>
-    </div>
+    <div class="actions"><button class="primary" id="generateBtn">Gerar prova(s)</button><button id="rerollBtn" disabled>Reroll selecionadas</button></div>
+    <div class="actions secondary-actions"><button id="printTestsBtn" disabled>Exportar prova(s) em PDF</button><button id="printKeyBtn" disabled>Exportar gabarito em PDF</button></div>
+    <div class="actions secondary-actions"><button id="exportJsonBtn" disabled>Exportar seleção JSON</button><label class="file-btn">Importar banco JSON<input id="importJson" type="file" accept="application/json"></label></div>
     <div class="notice" id="message"></div>
   </aside>
-
   <section class="workspace">
     <div class="empty" id="emptyState"><div class="empty-icon">✦</div><h2>Nenhuma prova gerada</h2><p>Configure a distribuição de dificuldade e clique em <b>Gerar prova(s)</b>.</p></div>
     <div id="testsContainer"></div>
@@ -57,6 +38,10 @@
 </main>
 <div id="printArea"></div>
 <script src="data/questions.js"></script>
+<script src="data/questions-1.js"></script>
+<script src="data/questions-2.js"></script>
+<script src="data/questions-3.js"></script>
+<script src="data/questions-4.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
